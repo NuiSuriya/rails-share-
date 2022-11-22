@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="card">
+    <h2><%= @product.name.upcase %></h2>
+    <p><strong><%= @product.category %></strong></p>
+    <p><%= @product.price  %>€</p>
+    <p>Description:<%= @product.description %></p>
+  </div>
+
+
+
+<%= link_to "Back", products_path %>
+
+</div>
