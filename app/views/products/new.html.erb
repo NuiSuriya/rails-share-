@@ -1,9 +1,27 @@
-<h1>New product? Add it!</h1>
-<h2></h2>
-<%= simple_form_for @product do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit %>
-<% end %>
+<div class="container py-5">
+  <%# <div class="col-lg-4 mx-auto"> %>
+  <div class="d-flex justify-content-sm-center">
+    <h1 >New product? <strong>Share</strong> it!</h1>
+    <h2></h2>
+  </div>
+
+  <%# <div class="row" > %>
+    <div class="col-lg-6 mx-auto">
+      <%# <div class="card"> %>
+        <div class="">
+          <ul class="form-boxes">
+            <%= simple_form_for @product do |f| %>
+              <%= f.input :name, placeholder:"Surf board" %>
+              <%= f.input :category, placeholder:"Sports" %>
+              <%= f.input :description, placeholder:"The fish" %>
+              <%= f.input :price, placeholder:"€/day" %>
+              <div class="d-flex flex-row-reverse">
+                <%= f.submit "Create", class:"btn btn-dark" %>
+              </div>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
