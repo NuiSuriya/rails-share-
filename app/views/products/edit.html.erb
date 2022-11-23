@@ -1,8 +1,27 @@
-<h1>Edit page...</h1>
-<%= simple_form_for @product do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit %>
-<% end %>
+<div class="container py-5">
+  <%# <div class="col-lg-4 mx-auto"> %>
+  <div class="d-flex justify-content-sm-center">
+    <h1 >Edit your <strong>Product</strong> !</h1>
+    <h2></h2>
+  </div>
+
+  <%# <div class="row" > %>
+    <div class="col-lg-6 mx-auto">
+      <%# <div class="card"> %>
+        <div class="">
+          <ul class="form-boxes">
+            <%= simple_form_for @product do |f| %>
+              <%= f.input :name, placeholder:"..." %>
+              <%= f.input :category, placeholder:"..." %>
+              <%= f.input :description, placeholder:"..." %>
+              <%= f.input :price, placeholder:"€/hr" %>
+              <div class="d-flex flex-row-reverse">
+                <%= f.submit "Change", class:"btn btn-dark" %>
+              </div>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
