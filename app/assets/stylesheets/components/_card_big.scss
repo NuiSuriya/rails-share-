@@ -1,9 +1,11 @@
 .card-big-img {
   width: 100%;
   height: 500px;
-  background-image: url(https://hips.hearstapps.com/hmg-prod/images/2020-03-10-use-a-drill-final-clean-00-01-57-10-still053-1584632505.jpg);
+  // background-image: url(https://hips.hearstapps.com/hmg-prod/images/2020-03-10-use-a-drill-final-clean-00-01-57-10-still053-1584632505.jpg);
   background-size: cover;
   background-position: center;
+  border-radius: 10px 10px 0 0;
+
 }
 
 .card-product {
@@ -29,4 +31,12 @@
   width: 95px;
   height: 95px;
   border-radius: 50%;
+}
+
+.card-category {
+  background-position: center;
+  background-size:contain;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+
 }
