@@ -1,7 +1,18 @@
-<h1>When do you want to book <%= @product.name %>? </h1>
+<div class="container py-5">
+  <div class="d-flex justify-content-sm-center">
+    <h1>When do you want to book <strong><%= @product.name %></strong>? </h1>
+  </div>
 
-<%= simple_form_for [@product, @booking] do |f| %>
-  <%= f.input :start_date, as: :date, html5: true  %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.submit "Book now!" %>
-<% end %>
+    <div class="col-lg-6 mx-auto">
+      <div class="form-boxes">
+        <%= simple_form_for [@product, @booking] do |f| %>
+          <%= f.input :start_date, as: :date, html5: true  %>
+          <%= f.input :end_date, as: :date, html5: true %>
+          <div class="d-flex flex-row-reverse">
+            <%= f.submit "Book now!", class:"btn btn-dark" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
+
