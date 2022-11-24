@@ -4,12 +4,18 @@
       <h1>All Products</h1>
     </div>
     <div>
-    <a href="#" class="btn btn-outline-dark">What are you looking for?</a>
+      <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "What are you looking for?"
+        %>
+        <%= submit_tag "Search", class: "btn btn-dark" %>
+        <% end %>
     </div>
   </div>
 
   <div class="card-small">
-
       <% @products.each do |product|%>
         <div class='card'>
           <a href="/products/<%=product.id %>">

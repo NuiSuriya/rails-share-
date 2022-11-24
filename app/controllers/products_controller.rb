@@ -1,6 +1,13 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    if params[:query].present?
+      # sql_query = "name @@ :query OR category @@ :query"
+      # @products = Product.where(sql_query, query: "%#{params[:query]}%")
+      @products = Product.search_by_name_and_category(params[:query])
+    else
+      @products = Product.all
+    end
+
   end
 
   def show
