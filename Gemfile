@@ -79,3 +79,6 @@ end
 gem "devise"
 gem "faker"
 gem "cloudinary"
+
+# Doing multiple search from search bar
+gem "pg_search"
