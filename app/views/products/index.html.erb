@@ -13,8 +13,14 @@
       <% @products.each do |product|%>
         <div class='card'>
           <a href="/products/<%=product.id %>">
+
             <div class="card-img-top">
+            <% if product.photo.attached? %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path product.photo.key, height: 400, crop: :fill %>')">
+              </div>
+            <% end %>
             </div>
+
             <div class="card-body">
               <div class="card-text">
                 <div class="card-info d-flex justify-content-between">
@@ -22,7 +28,7 @@
                     <h5><%= product.name.capitalize%></h3>
                   </div>
                   <div>
-                    <p><%=  product.price %>€/hr</p>
+                    <p><%=  product.price %>€/day</p>
                   </div>
                 </div>
                 <p><%= product.description %></p>

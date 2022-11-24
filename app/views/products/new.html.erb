@@ -15,6 +15,11 @@
               <%= f.input :category, placeholder:"Sports" %>
               <%= f.input :description, placeholder:"The fish" %>
               <%= f.input :price, placeholder:"€/day" %>
+              <%= f.input :photo, as: :file %>
+              <%# <% url_mapbox = "pk.eyJ1IjoibnJvdWdlciIsImEiOiJjbGEya3d4amUwaHNvM3NwazRsbWVkN2pkIn0.604LgsXW7i9RDHwzT61V5Q" %> %>
+              <%# <%= f.input :address, %>
+                <%# # input_html: {data: {address_autocomplete_target: "address"}}, %>
+                <%# # wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV[url_mapbox]}} %>
               <div class="d-flex flex-row-reverse">
                 <%= f.submit "Create", class:"btn btn-dark" %>
               </div>
