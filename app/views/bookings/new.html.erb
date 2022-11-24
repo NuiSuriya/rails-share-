@@ -1,0 +1,7 @@
+<h1>When do you want to book <%= @product.name %>? </h1>
+
+<%= simple_form_for [@product, @booking] do |f| %>
+  <%= f.input :start_date, as: :date, html5: true  %>
+  <%= f.input :end_date, as: :date, html5: true %>
+  <%= f.submit "Book now!" %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Your bookings</h1>
+<% @bookings.each do |booking| %>
+  <p>You've booked "<%= booking.product.name %>"</p>
+  <p>from: <%= booking.start_date %></p>
+  <p>until: <%= booking.end_date %></p>
+<% end %>
