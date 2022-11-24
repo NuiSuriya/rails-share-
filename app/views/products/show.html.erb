@@ -2,21 +2,14 @@
 
   <div class="card-big  d-flex flex-column">
 
-    <div class="card-big-img border border-2">
+    <div class="card-big-img border border-2"></div>
 
-
-
-
-
-    </div>
-
-    <div class="card-product d-flex justify-content-between">
+    <div class="card-product d-flex justify-content-between m-2">
 
       <div class="title">
         <h2><%= @product.name.upcase %></h2>
         <p><strong><%= @product.category.capitalize %></strong></p>
       </div>
-
 
       <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGwUj5ROzfTHw/profile-displayphoto-shrink_800_800/0/1524394381291?e=2147483647&v=beta&t=7o31lI_GFRLb80zvLlpah-wpFdua8vKKgpWqbMwa1PU" alt="" class="avatar-large" id="big-card-avatar">
 
@@ -27,7 +20,7 @@
 
     </div>
 
-    <div class="description">
+    <div class="description m-2">
       <p>Description:<%= @product.description.capitalize %></p>
     </div>
 
