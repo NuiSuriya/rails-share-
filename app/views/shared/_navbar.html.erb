@@ -3,8 +3,9 @@
     <%# <%= link_to "#", class: "navbar-brand" do %>
       <%# <%= image_tag "https://i.ibb.co/Hp0tX2r/SHARE-1.png", style: 'height:110px; width:110px;' %>
     <%# <% end %>
-    <span data-controller="navbar-js"></span>
     <div class="type">
+    <span data-controller="navbar-js"></span>
+
       <p><span data-controller="typed-js" style="font-weight: bold; font-size: x-large;"></span></p>
     </div>
     <%= link_to "#", class: "navbar-brand" do %>
@@ -18,7 +19,8 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Welcome! #{current_user.email}", products_path, class: "nav-link" %>
+          <% name_size = current_user.email.index("@") %>
+            <%= link_to "Welcome! #{current_user.email.capitalize.first(name_size)}", products_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
             <%# <%= link_to "My Booking", bookings_path, class: "nav-link" %>
@@ -31,8 +33,9 @@
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%# <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Home", products_path, class:"dropdown-item nav-link"%>
               <%= link_to "Add a new product", new_product_path, class:"dropdown-item nav-link"%>
-              <%= link_to "My Booking", bookings_path, class: "dropdown-item nav-link" %>
+              <%= link_to "My Bookings", bookings_path, class: "dropdown-item nav-link" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item nav-link" %>
               <%# <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%# <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
