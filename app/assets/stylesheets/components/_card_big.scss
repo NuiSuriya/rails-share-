@@ -1,36 +1,24 @@
 .card-big-img {
   width: 100%;
-  height: 500px;
-  // background-image: url(https://hips.hearstapps.com/hmg-prod/images/2020-03-10-use-a-drill-final-clean-00-01-57-10-still053-1584632505.jpg);
+  height: 300px;
   background-size: cover;
   background-position: center;
-  border-radius: 10px 10px 0 0;
 
-}
+  .card-product {
+    position: relative;
 
-.card-product {
-  position: relative;
+    .title {
+      font-size:xx-large;
+    }
 
-  .title {
-    font-size:xx-large;
+    .price {
+      font-size:xx-large;
+    }
   }
 
-  .price {
-    font-size:xx-large;
+  .description {
+    font-size: large;
   }
-}
-
-.description {
-  font-size: large;
-}
-
-#big-card-avatar {
-  position: absolute;
-  right: 155px;
-  top: -65px;
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
 }
 
 .card-category {
@@ -38,6 +26,5 @@
   background-size:cover;
   height: 100%;
   width: 100%;
-  border-radius: 10px 10px 0 0;
-
+  border-radius: 15px;
 }
