@@ -1,13 +1,10 @@
 .container{
   // background-color: #393E46;
 
-  .card-small{
-    // max-width: 1200px ;
-    display: grid;
-    grid-column: 2/4;
+  .card-show{
+    // display: grid;
     // grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 8px;
+    // grid-gap: 8px;
 
     .card{
       border-radius: 10px;
@@ -39,4 +36,3 @@
   }
 
 }
-
