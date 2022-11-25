@@ -1,26 +1,28 @@
-<div class="container home-background">
-  <div class="row align-items-center">
-    <div class="col">
-      <h4>welcome to <%= image_tag("sharelogo.png", :width => 200)%></h4>
-      <p>A place where you can share your tool and make some profit of it or,
-      to just rent it and save money.</p>
-      <div class="order-1 p-2">
-        <%# <%= link_to "Let's start", products_path, class:"btn btn-dark" %>
-      </div>
-        <div>
-          <%= form_with url: products_path, method: :get, class: "d-flex" do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "What are you looking for?"
-            %>
-            <%= submit_tag "Search", class: "btn btn-dark", id:"btn-search-index" %>
-            <%= link_to "All products", products_path, class:"btn" %>
-          <% end %>
+<div class="home-background">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <h4>welcome to <%= image_tag("sharelogo.png", :width => 200)%></h4>
+        <p>A place where you can share your tool and make some profit of it or,
+        to just rent it and save money.</p>
+        <div class="order-1 p-2">
+          <%# <%= link_to "Let's start", products_path, class:"btn btn-dark" %>
         </div>
-    </div>
-    <div class="col">
-      <img class="card-img" src="https://i.ibb.co/ScVYw65/Dise-o-sin-t-tulo.png" alt="Card image">
+          <div>
+            <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "What are you looking for?"
+              %>
+              <%= submit_tag "Search", class: "btn btn-dark", id:"btn-search-index" %>
+              <%= link_to "All products", products_path, class:"btn" %>
+            <% end %>
+          </div>
+      </div>
+      <div class="col">
+        <img class="card-img" src="https://i.ibb.co/ScVYw65/Dise-o-sin-t-tulo.png" alt="Card image">
+      </div>
     </div>
   </div>
-  </div>
+</div>
