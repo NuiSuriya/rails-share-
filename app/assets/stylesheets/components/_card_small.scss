@@ -41,5 +41,15 @@
       }
     }
   }
+  @media(max-width: 992px) {
+    .card-small {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
+  @media(max-width: 768px) {
+    .card-small {
+      grid-template-columns: 1fr;
+    }
+  }
 }

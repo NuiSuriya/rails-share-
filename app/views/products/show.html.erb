@@ -1,37 +1,33 @@
 <div class="container">
-
-  <div class="card-big  d-flex flex-column">
-
-    <div class="card-big-img border border-2">
+  <div class="row card-big  d-flex justify-content-between">
+    <div class="card-big-img col-6">
       <% if @product.photo.attached? %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @product.photo.key, height: 1000, crop: :fill %>')">
+      <div class="card-category shadow" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path @product.photo.key, height: 1000, crop: :fill %>')">
       </div>
       <% end %>
     </div>
 
-    <div class="card-product d-flex justify-content-between m-2">
+    <div class="card-big-info d-flex flex-column col-6">
+      <div class="card-product d-flex justify-content-between m-2">
+        <div class="title">
+          <h1><%= @product.name.upcase %></h2>
+          <h4><strong><%= @product.category.capitalize %></strong></p>
+        </div>
 
-      <div class="title">
-        <h2><%= @product.name.upcase %></h2>
-        <p><strong><%= @product.category.capitalize %></strong></p>
+        <div class="price d-flex align-items-center">
+          <p><%= @product.price  %>€/day</p>
+        </div>
       </div>
 
-      <%# <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGwUj5ROzfTHw/profile-displayphoto-shrink_800_800/0/1524394381291?e=2147483647&v=beta&t=7o31lI_GFRLb80zvLlpah-wpFdua8vKKgpWqbMwa1PU" alt="" class="avatar-large" id="big-card-avatar"> %>
-
-      <div class="price d-flex align-items-center">
-        <p><%= @product.price  %>€/day</p>
+      <div class="description flex-grow-1 m-2">
+        <p>Description:<%= @product.description.capitalize %></p>
       </div>
 
-
+      <div class="big-car-link">
+        <%= link_to "Edit", edit_product_path, class:"btn btn-dark btn-lg" %>
+        <%= link_to "Delete", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-dark btn-lg" %>
+        <%= link_to "Book", new_product_booking_path(@product), class:" btn btn-dark btn-lg"%>
+      </div>
     </div>
-
-    <div class="description m-2">
-      <p>Description:<%= @product.description.capitalize %></p>
-    </div>
-
   </div>
-  <%= link_to "Edit", edit_product_path, class:"btn btn-dark" %>
-  <%= link_to "Delete", product_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-dark" %>
-  <%= link_to "Back", products_path, class:"btn btn-dark" %>
-  <%= link_to "Book", new_product_booking_path(@product)%>
 </div>

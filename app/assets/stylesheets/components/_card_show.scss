@@ -8,6 +8,7 @@
 
     .card{
       border-radius: 10px;
+
       a{
         text-decoration: none;
       }
@@ -35,4 +36,15 @@
     }
   }
 
+  @media(max-width: 992px) {
+    .card-show {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .card-show {
+      grid-template-columns: 1fr;
+    }
+  }
 }
