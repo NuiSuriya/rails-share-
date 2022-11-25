@@ -7,14 +7,18 @@
     grid-column: 2/4;
     // grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 8px;
+    grid-gap: 16px;
 
     .card{
+      margin-top: 2rem;
       border-radius: 10px;
       a{
         text-decoration: none;
       }
 
+      // a.hover {
+
+      // }
 
       .card-text {
         h5 {
@@ -39,4 +43,3 @@
   }
 
 }
-
