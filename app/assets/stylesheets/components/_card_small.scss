@@ -10,11 +10,15 @@
     grid-gap: 16px;
 
     .card{
+      margin-top: 2rem;
       border-radius: 10px;
       a{
         text-decoration: none;
       }
 
+      // a.hover {
+
+      // }
 
       .card-text {
         h5 {
@@ -37,7 +41,6 @@
       }
     }
   }
-
   @media(max-width: 992px) {
     .card-small {
       grid-template-columns: 1fr 1fr;

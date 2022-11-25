@@ -5,16 +5,14 @@
 
   .navbar-collapse {
     flex-grow: 0;
-
     .nav-link {
       font-size: x-large;
       color: black;
-      font-weight: 600;
-
+      font-weight: 400;
     }
   }
 
   .navbar-brand img {
-    width: 40px;
+    width: 35px;
   }
 }
